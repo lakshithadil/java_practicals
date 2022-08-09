@@ -31,7 +31,7 @@ public class GapInIntArrays {
         if(arrayIn.length>=2) {
             int[] gap = new int[arrayIn.length - 1];
             for (int i = 0; i < arrayIn.length - 1; i++) {
-                gap[i] = arrayIn[i + 1] - arrayIn[i];
+                gap[i] = Math.abs(arrayIn[i + 1] - arrayIn[i]);
             }
             return Arrays.stream(gap).min().getAsInt();
         }

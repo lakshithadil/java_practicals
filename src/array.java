@@ -44,7 +44,7 @@ public class array {
                 c[i][j] = a[i][j]-b[i][j];
             }
         }
-        //print the output c matrix
+        //print the output matrix c
         System.out.println("values in c array:");
         for (int [] val:c) {
             for (int val2:val) {
