@@ -11,14 +11,20 @@ public class Member {
         System.out.println("Do your age less than 40 ( Y or N ): ");
         char ageLess40 = Character.toUpperCase(input.next().charAt(0));
         Member member = new Member(sex,ageLess40);
-        System.out.println(member.sex +" "+ member.ageLess40);
-        System.out.println(member.placeOfService(member.sex, member.ageLess40));
+        //System.out.println(member.sex +" "+ member.ageLess40);
+        String place = member.placeOfService(member.sex, member.ageLess40);
+        if(place != "ERROR") {
+            System.out.println("You can work in " +place);
+        }
+        else {
+            System.out.println(place+"\\:"+" Please enter the correct answers to the questions");
+        }
     }
     public String placeOfService(char sex, char ageLess40){
         String place = "";
         switch (sex){
             case 'F':
-                place = "urban areas";
+                place = "urban areas only";
                 break;
             case 'M':
                 switch (ageLess40){
@@ -29,7 +35,8 @@ public class Member {
                         place = "urban areas only";
                         break;
                     default:place = "ERROR";
-                }
+                };
+                break;
             default:place = "ERROR";
         }
     return place;
