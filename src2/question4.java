@@ -26,6 +26,7 @@ public class question4 {
             System.out.print("array["+i+"]:");
             this.array1[i]=sc.nextInt();
         }
+        //n1 and n2 both should be same
         //get the elements for the second array
         System.out.print("Enter the length of the Second array:");
         this.n2=sc.nextInt();
